@@ -28,7 +28,7 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: 'https://practicesoftwaretesting.com/',
-    headless: false,
+    headless: true,
     viewport: null,
     slowMo: 500,
     launchOptions: {
