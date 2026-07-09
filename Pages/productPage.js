@@ -24,7 +24,9 @@ export default class ProductPage extends BasePage {
 
     async addProductToCart() {
         await this.clickOnCategories();
+        await this.page.waitForTimeout(2000); // Wait for 1 second before clicking on subcategory
         await this.clickOnSubCategory();
+        await this.page.waitForTimeout(2000);
         await this.clickOnProduct();
         await this.addProductToCartButton.click();
     }

@@ -10,6 +10,7 @@ test.describe('Checkout Flow', () => {
 
     test('Complete checkout process with payment', async ({ page, productPage, checkoutPage }) => {
         await page.goto('/');
+        await page.waitForTimeout(2000); // Wait for 2 seconds before proceeding
         await productPage.addProductToCart();
         await checkoutPage.completeCheckout();
     });
